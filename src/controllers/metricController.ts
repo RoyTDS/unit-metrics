@@ -70,3 +70,21 @@ export const deleteMetric = async (req: Request, res: Response) => {
         res.status(500).json({ error: 'Failed to delete metric', detail: err });
     }
 };
+
+export const updateMetric = async (req: Request, res: Response) => {
+    try {
+        const { id } = req.params;
+        const { value, unit, date } = req.body;
+        const updated = await Metric.findByIdAndUpdate(
+            id,
+            { value, unit, date },
+            { new: true }
+        );
+        if (!updated) {
+            return res.status(404).json({ error: 'Metric not found' });
+        }
+        res.json(updated);
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to update metric', detail: err });
+    }
+};
