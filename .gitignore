@@ -1,0 +1,48 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Compiled files
+dist/
+build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# MongoDB dump
+dump/
+*.gz
+*.archive
+
+# Test coverage
+coverage/
+
+# Optional: Uploads or heavy assets
+uploads/
+*.zip
+*.rar
+*.7z
+*.mp4
+*.mp3
+*.mov
+*.avi
+
+# Optional: Postman files, if you generate exports often
+postman_collection.json
